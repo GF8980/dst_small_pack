@@ -11,7 +11,7 @@ CREATE TABLE #Events
  
 INSERT INTO #Events
 SELECT 1, '2013-09-01 15:33', 0
-UNION ALL SELECT 2, '2013-09-01 16:15', 0
+UNION ALL SELECT 
 UNION ALL SELECT 2, '2013-09-01 17:00', 1
 UNION ALL SELECT 3, '2013-09-01 17:10', 0
 UNION ALL SELECT 1, '2013-09-01 18:20', 1
@@ -23,7 +23,7 @@ UNION ALL SELECT 2,  '2013-09-01 18:01', 0;
  
 SELECT UserID, LoginTime=a.EventTime, LogoutTime=b.EventTime
 FROM #Events a
--- Use an OUTER APPLY to retain outer query rows when inner query returns NULL
+-- Use an OUTER APPLY to retain hjkhtvbj
 OUTER APPLY
 (
     -- find the first of any events for this user after the login. If a logout
